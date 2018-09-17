@@ -1,0 +1,9 @@
+$enable-rounded: false;
+
+$color-green: #00612f;
+$theme-colors: map-merge(
+  (
+    "black": $color-green
+  ),
+  $theme-colors
+);

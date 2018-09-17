@@ -1,0 +1,14 @@
+{
+  "name": "js-sass-grunt-template",
+  "description": "This project is a template project to create a basic JS/SASS based grunt application.",
+  "main": "index.js",
+  "authors": ["D Patel"],
+  "license": "ISC",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1"
+  }
+}

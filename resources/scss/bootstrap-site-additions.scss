@@ -1,0 +1,7 @@
+@import "bootstrap.scss";
+
+@include media-breakpoint-up(xl) {
+  .modal-lg {
+    max-width: map-get($grid-breakpoints, xl) - 200;
+  }
+}
