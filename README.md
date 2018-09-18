@@ -22,7 +22,7 @@ This project relies on Node, Grunt, Ruby/SASS. Please install them accordingly.
 
 - Use NPM
 
-## Starting the project
+## Getting started
 
 - npm install
 - bower install
@@ -53,3 +53,7 @@ Add the path of the individual js files in Gruntfile.js
 
 - App js files in the first array
 - 3rd party packages in the second array
+
+## Running the code
+
+In VS Code, you can start a server using the **Live Server** extension easily.
