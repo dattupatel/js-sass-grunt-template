@@ -57,3 +57,4 @@ Add the path of the individual js files in Gruntfile.js
 ## Running the code
 
 In VS Code, you can start a server using the **Live Server** extension easily.
+Or you can browse to the index.html page from any browser.
