@@ -29,15 +29,15 @@ This project relies on Node, Grunt, Ruby/SASS. Please install them accordingly.
 
 ## Index.html (and other html files)
 
-_index.html_ and other html files is in the **public** folder
+_index.html_ and other html files is in the `public` folder
 
 ## Working with code (files)
 
-- Html > the .html pages are in **public** folder
-- SASS > the SASS files are in **resources > scss** folder
-- JS > the JS file are in **resources > js** folder
-- Most of the working files will be in the **resources** folder
-- _note_: These files get copied to the **public** folder when using `grunt`
+- Html > the .html pages are in `public` folder
+- SASS > the SASS files are in `resources > scss` folder
+- JS > the JS file are in `resources > js` folder
+- Most of the working files will be in the `resources` folder
+- _note_: These files get copied to the `public` folder when using `grunt`
 
 ### Adding more SASS files
 
