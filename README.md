@@ -2,6 +2,10 @@
 
 This project is a template project to create a basic JS/SASS based grunt application.
 
+## TODO
+
+- Add requireJs and grunt require js tasks
+
 ## Pre-requisites
 
 This project relies on Node, Grunt, Ruby/SASS. Please install them accordingly.
