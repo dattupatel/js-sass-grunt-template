@@ -1,8 +1,8 @@
 require.config({
   paths: {
-    jquery: "vendor/jquery",
-    bootstrap: "vendor/bootstrap",
-    popper: "vendor/popper"
+    jquery: "vendor/jquery.min",
+    bootstrap: "vendor/bootstrap.min",
+    popper: "vendor/popper.min"
   },
   shim: {
     bootstrap: ["jquery", "popper"]

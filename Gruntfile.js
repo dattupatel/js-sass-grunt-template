@@ -80,6 +80,14 @@ module.exports = function(grunt) {
             dest: "<%= pkg.webDir %>/<%= pkg.srcAssetsDir %>/js/",
             ext: ".min.js",
             extDot: "last"
+          },
+          {
+            expand: true,
+            cwd: "<%= pkg.webDir %>/<%= pkg.srcAssetsDir %>/js/vendor/",
+            src: ["*.js", "!*.min.js"],
+            dest: "<%= pkg.webDir %>/<%= pkg.srcAssetsDir %>/js/vendor/",
+            ext: ".min.js",
+            extDot: "last"
           }
         ]
       }
