@@ -6,8 +6,11 @@ module.exports = function(grunt) {
     clean: {
       src: ["<%= pkg.webDir %>/<%= pkg.srcAssetsDir %>"]
     },
-    jshint: {
-      all: ["Gruntfile.js", "<%= pkg.srcAssetsDir %>/js/**.js"]
+    eslint: {
+      options: {
+        configFile: "eslint.json"
+      },
+      src: ["Gruntfile.js", "<%= pkg.srcAssetsDir %>/js/**.js"]
     },
     copy: {
       scripts: {
@@ -16,15 +19,21 @@ module.exports = function(grunt) {
             expand: true,
             src: ["<%= pkg.srcAssetsDir %>/js/*"],
             dest: "<%= pkg.webDir %>"
-          },
+          }
+        ]
+      },
+      vendorScripts: {
+        files: [
           {
             expand: true,
             flatten: true,
             src: [
               "<%= pkg.vendorAssetsDir %>/bootstrap/dist/js/bootstrap.js",
-              "<%= pkg.vendorAssetsDir %>/jquery/dist/jquery.js"
+              "<%= pkg.vendorAssetsDir %>/jquery/dist/jquery.js",
+              "<%= pkg.vendorAssetsDir %>/requirejs/require.js",
+              "<%= pkg.vendorAssetsDir %>/popper.js/dist/umd/popper.js"
             ],
-            dest: "<%= pkg.webDir %>/<%= pkg.srcAssetsDir %>/js"
+            dest: "<%= pkg.webDir %>/<%= pkg.srcAssetsDir %>/js/vendor"
           }
         ]
       },
@@ -47,6 +56,12 @@ module.exports = function(grunt) {
             flatten: true,
             src: ["<%= pkg.srcAssetsDir %>/videos/*"],
             dest: "<%= pkg.webDir %>/<%= pkg.srcAssetsDir %>/videos"
+          },
+          {
+            expand: true,
+            flatten: true,
+            src: ["<%= pkg.vendorAssetsDir %>/popper.js/dist/umd/popper.js"],
+            dest: "<%= pkg.webDir %>"
           }
         ]
       }
@@ -102,7 +117,7 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks("grunt-contrib-copy");
   grunt.loadNpmTasks("grunt-contrib-clean");
-  grunt.loadNpmTasks("grunt-contrib-jshint");
+  grunt.loadNpmTasks("gruntify-eslint");
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-sass");
   grunt.loadNpmTasks("grunt-contrib-cssmin");
@@ -110,8 +125,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask("default", [
     "clean",
-    "jshint",
-    //'bowerRequirejs',
+    "eslint",
     "sass",
     "copy",
     "uglify",
@@ -119,4 +133,8 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask("makecss", ["sass", "cssmin"]);
+
+  grunt.registerTask("makejs", ["eslint", "copy:scripts"]);
+
+  grunt.registerTask("watch", ["eslint", "copy:scripts", "sass", "cssmin"]);
 };
