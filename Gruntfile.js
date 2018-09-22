@@ -87,7 +87,6 @@ module.exports = function(grunt) {
     sass: {
       dev: {
         options: {
-          //paths: ["<%= pkg.srcAssetsDir %>/scss"],
           style: "expanded",
           compass: false
         },

@@ -2,10 +2,6 @@
 
 This project is a template project to create a basic JS/SASS based grunt application.
 
-## TODO
-
-- Add requireJs and grunt require js tasks
-
 ## Pre-requisites
 
 This project relies on Node, Grunt, Ruby/SASS. Please install them accordingly.
@@ -16,24 +12,24 @@ This project relies on Node, Grunt, Ruby/SASS. Please install them accordingly.
 - Clone the repository
 - Update the package.json and bower.json to reflect proper meta data (name, author, description, etc.)
 
-## Installing packages
-
-### Front End packages
-
-- Use Bower
-
-### Development packages
-
-- Use NPM
-
 ## Getting started
 
 - npm install
 - bower install
 
+### Installing more packages
+
+#### Front End packages
+
+- Use Bower
+
+#### Development packages
+
+- Use NPM
+
 ## Index.html (and other html files)
 
-_index.html_ and other html files is in the `public` folder
+_index.html_ and other html files should in the `public` folder
 
 ## Working with code (files)
 
@@ -46,15 +42,18 @@ _index.html_ and other html files is in the `public` folder
 ### Adding more SASS files
 
 Add the main .scss files to the following in Gruntfile.js
-`sass > files >`
+`sass > files`
 
 ### Adding more JS files
 
 Add the path of the individual js files in Gruntfile.js
-`copy > scripts > files`
 
-- App js files in the first array
-- 3rd party packages in the second array
+- App JS files `copy > scripts`
+- 3rd party packages in the second array `copy > vendorScripts`
+
+#### Adding to require js
+
+Then add the appropriate config/require in the app.js file
 
 ### After updates
 
@@ -66,7 +65,15 @@ run the following in terminal (or command prompt, etc.)
 
 - grunt makecss
 
-### Running the code
+#### After updating only the JS files
+
+- grunt makejs
+
+## Running the code
 
 In VS Code, you can start a server using the **Live Server** extension easily.
 Or you can browse to the index.html page from any browser.
+
+## Note
+
+_Bootstrap and require need a "Popper.js" file to be present in the root folder, hence the file._
