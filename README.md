@@ -37,7 +37,7 @@ _index.html_ and other html files should in the `public` folder
 - SASS > the SASS files are in `resources > scss` folder
 - JS > the JS file are in `resources > js` folder
 - Most of the working files will be in the `resources` folder
-- _note_: These files get copied to the `public` folder when using `grunt`
+- _note_: These files get copied to the `public/resources` folder when using `grunt`
 
 ### Adding more SASS files
 
