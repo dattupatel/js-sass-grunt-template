@@ -1,7 +1,7 @@
 {
   "name": "js-sass-grunt-template",
   "version": "1.0.0",
-  "description": "This project is a template project to create a basic JS/SASS based grunt application.",
+  "description": "This is a boilerplate template project to create a basic HTML5/JS/SASS/Grunt based application.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

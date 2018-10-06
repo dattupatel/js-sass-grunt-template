@@ -76,4 +76,4 @@ Or you can browse to the index.html page from any browser.
 
 ## Note
 
-_Bootstrap and require need a "Popper.js" file to be present in the root folder, hence the file._
+_Bootstrap and require.js needed a "Popper.js" file to be present in the root folder, hence the file. (To fix)_
