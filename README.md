@@ -10,7 +10,7 @@ This project relies on Node, Grunt, Ruby/SASS. Please install them accordingly.
 - [Ruby](https://rubyinstaller.org/) and [SASS](http://sass-lang.com/install)
 - Install grunt-cli globally => `npm install -g grunt-cli`
 - Clone the repository
-- Update the package.json and bower.json to reflect proper meta data (name, author, description, etc.)
+- Update the `package.json` and `bower.json` to reflect proper meta data (name, author, description, etc.)
 
 ## Getting started
 
